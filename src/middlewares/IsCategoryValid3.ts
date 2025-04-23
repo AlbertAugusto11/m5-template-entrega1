@@ -11,7 +11,7 @@ export class IsCategoryValid3 {
             const findInData = data.filter(element => element.category?.name.toLowerCase() == busca.toLowerCase())
             
             if (findInData.length == 0) {
-                return res.status(404).json({ menssage: "Category not found" })
+                return res.status(404).json({ message: "Category not found" })
             }
         }
 

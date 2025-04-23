@@ -26,6 +26,15 @@ export class TasksControllers {
         return res.status(200).json(response)
     }
 
+    async update (req: Request, res: Response) {
+        const tasksservices = new TasksServices()
+
+        const response = await tasksservices.update(Number(req.params.id), req.body)
+
+        return res.status(200).json(response)
+
+    }
+
     async delete (req: Request, res: Response) {
         const tasksservices = new TasksServices()
 

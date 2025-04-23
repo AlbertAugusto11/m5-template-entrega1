@@ -8,7 +8,7 @@ export class IsCategoryValid2 {
         const findCategoryId = await prisma.category.findFirst({ where: { id: categoryId } })
 
         if (!findCategoryId) {
-            return res.status(404).json({menssage: "Category not found"})
+            return res.status(404).json({message: "Category not found"})
         }
 
         next()

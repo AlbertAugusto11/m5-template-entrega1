@@ -32,6 +32,12 @@ export class TasksServices {
         return data3
     }
 
+    async update (id: number, task: TTasks) {
+        const data = await prisma.task.update({where: {id: id}, data: task})
+
+        return data
+    }
+
     async delete (id: number) {
         const data = await prisma.task.delete({where: {id: id}})
 

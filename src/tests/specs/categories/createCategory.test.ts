@@ -13,7 +13,7 @@ describe("create category", async () => {
       name: category.name,
     };
 
-    expect(response.body).toEqual(expectedBody);
+    expect(response.body).toStrictEqual(expectedBody);
     expect(response.statusCode).toBe(201);
   });
 
@@ -32,7 +32,7 @@ describe("create category", async () => {
       ],
     };
 
-    expect(response.body).toEqual(expectedBody);
+    expect(response.body).toStrictEqual(expectedBody);
     expect(response.statusCode).toBe(400);
   });
 
@@ -56,7 +56,7 @@ describe("create category", async () => {
       ],
     };
 
-    expect(response.body).toEqual(expectedBody);
+    expect(response.body).toStrictEqual(expectedBody);
     expect(response.statusCode).toBe(400);
   });
 });

@@ -19,7 +19,7 @@ describe("delete category", () => {
       message: "Category not found",
     };
 
-    expect(response.body).toEqual(expectedBody);
+    expect(response.body).toStrictEqual(expectedBody);
     expect(response.statusCode).toBe(404);
   });
 });
