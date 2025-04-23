@@ -9,7 +9,7 @@ export class IsCategoryValid3 {
             const findCategory = await prisma.task.findMany({ include: { category: true } })
             const data = findCategory.map(({ categoryId, ...resto }) => resto)
             const findInData = data.filter(element => element.category?.name.toLowerCase() == busca.toLowerCase())
-            
+
             if (findInData.length == 0) {
                 return res.status(404).json({ message: "Category not found" })
             }
